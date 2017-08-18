@@ -6,11 +6,11 @@ public class Demo {
 
 	public static void main(String[] args) {
 		
-		Scanner scan = new Scanner(System.in);
-		System.out.println("What is you name?");
-		String name = scan.nextLine();
-		System.out.println("hello,  "  + name);
-		scan.close();
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("What is you name?");
+//		String name = scan.nextLine();
+//		System.out.println("hello,  "  + name);
+//		scan.close();
 		
 		Sample sample = new Sample();
 		System.out.println(sample.getWidth());
@@ -43,6 +43,29 @@ public class Demo {
 			System.out.println(i + " " + string);
 		}
 		System.out.println(i + " " + string);
+		
+		/* circle */
+		Circle c1 = new Circle();
+		System.out.println(c1);
+		
+		c1 = new Circle(5);
+		System.out.println(c1);
+		
+		c1.setRadius(7);
+		System.out.println(c1);
+		
+		Circle c2 = new Circle(7);
+		System.out.println("c2: " + c2 );
+		
+		System.out.println("is c1 == c2? " + (c1 == c2));
+		System.out.println("is c1.equals(c2)? " + (c1.equals(c2)));
+		
+		String s1 = "ABC";
+		String s2 = "abc";
+		s2 = s2.toUpperCase();
+		System.out.println("is s1 == s2? " + (s1 == s2));
+		System.out.println("is s1.equals(s2)? " + (s1.equals(s2)));
+		
 	}
 
 	public String toString(){
