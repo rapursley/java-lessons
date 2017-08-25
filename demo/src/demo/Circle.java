@@ -20,6 +20,10 @@ public class Circle {
 	public void setRadius(double rad) {
 		radius = rad;
 	}
+	
+	public double getArea(){
+		return Math.PI * Math.pow(radius, 2);
+	}
 
 	public String toString(){
 		return "I am a circle with the radius of " + radius;
