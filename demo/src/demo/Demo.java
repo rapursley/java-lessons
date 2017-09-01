@@ -66,6 +66,18 @@ public class Demo {
 		System.out.println("is s1 == s2? " + (s1 == s2));
 		System.out.println("is s1.equals(s2)? " + (s1.equals(s2)));
 		
+		Shape[] shapes = new Shape[10];
+		shapes[0] = c1;
+		shapes[1] = c2;
+		shapes[2] = new Rectangle();
+		shapes[3] = new Rectangle(3, 4);
+		for (int j = 0; j < shapes.length; j++) {
+			Shape shape = shapes[j];
+			if (shape != null ){
+				System.out.println(String.valueOf(shape) + " area = " + shape.getArea());
+			}
+		}
+		
 	}
 
 	public String toString(){

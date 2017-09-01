@@ -1,6 +1,6 @@
 package demo;
 
-public class Circle {
+public class Circle extends Shape{
 	private double radius;
 
 	public Circle() {
@@ -18,7 +18,9 @@ public class Circle {
 	}
 
 	public void setRadius(double rad) {
-		radius = rad;
+		if(rad > 0){
+			radius = rad;
+		}
 	}
 	
 	public double getArea(){
