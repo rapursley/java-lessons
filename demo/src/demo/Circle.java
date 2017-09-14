@@ -28,10 +28,14 @@ public class Circle extends Shape{
 	}
 
 	public String toString(){
-		return "I am a circle with the radius of " + radius;
+		return "I am a circle with the radius of " + radius + " and an area of " + getArea();
 	}
 	
 	public boolean equals(Circle c2){
 		return radius == c2.radius;
+	}
+	
+	public String whoAmI() {		
+		return "I am a circle, which is a subclass of " + super.whoAmI();
 	}
 }

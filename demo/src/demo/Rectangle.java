@@ -38,7 +38,11 @@ public class Rectangle extends Shape {
 	}
 	
 	public String toString(){
-		return "I am a rectangle with a length of " + length + " and width of " + width;
+		return "I am a rectangle with a length of " + length + " and width of " + width + " and an area of " + getArea();
+	}
+
+	public String whoAmI() {		
+		return "I am a rectangle, which is a subclass of " + super.whoAmI();
 	}
 
 }
