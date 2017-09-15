@@ -4,6 +4,12 @@ public class Triangle extends Shape {
 	private double base;
 	private double height;
 	
+	public Triangle() {
+		super();
+		this.base = 1;
+		this.height = 1;
+	}
+	
 	public Triangle(double base, double height) {
 		super();
 		this.base = base;

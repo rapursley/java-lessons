@@ -9,6 +9,12 @@ public class Rectangle extends Shape {
 		this.length = 1;
 		this.width = 1;
 	}
+	
+	public Rectangle(double length, double width) {
+		super();
+		this.length = length;
+		this.width = width;
+	}
 
 	public double getLength() {
 		return length;
@@ -23,12 +29,6 @@ public class Rectangle extends Shape {
 	}
 
 	public void setWidth(double width) {
-		this.width = width;
-	}
-
-	public Rectangle(double length, double width) {
-		super();
-		this.length = length;
 		this.width = width;
 	}
 

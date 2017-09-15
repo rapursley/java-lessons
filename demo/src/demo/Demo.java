@@ -1,5 +1,6 @@
 package demo;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -64,9 +65,16 @@ public class Demo {
 		s2 = s2.toUpperCase();
 		System.out.println("is s1 == s2? " + (s1 == s2));
 		System.out.println("is s1.equals(s2)? " + (s1.equals(s2)));
+		System.out.println("=============================================");
 
-		
-		Shape[] shapes = new Shape[10];
+		/* Polymorphism */
+		Shape shape = new Circle();
+		System.out.println(shape);
+		shape = new Rectangle();
+		System.out.println(shape);
+		shape = new Triangle();
+		System.out.println(shape);
+		Shape[] shapes = new Shape[7];
 		shapes[0] = c1;
 		shapes[1] = c2;
 		shapes[2] = new Rectangle();
@@ -74,25 +82,43 @@ public class Demo {
 		shapes[4] = new Triangle(2, 8);
 		shapes[5] = new Triangle(1, 3);
 		shapes[6] = new Triangle(5, 7);
+		System.out.println("=============================================");
 		for (int j = 0; j < shapes.length; j++) {
-			Shape shape = shapes[j];
+			shape = shapes[j];
 			if (shape != null) {
 				System.out.println(String.valueOf(shape) + " area = " + shape.getArea());
-//				System.out.println(((Circle) shape).getRadius());
-//				System.out.println(shape.whoAmI());
+				if(shape instanceof Circle) {
+					//Example of casting
+					System.out.println(((Circle) shape).getRadius());
+				}				
+				System.out.println(shape.whoAmI());
 			}
 		}
-		
-//		double d = 1;
-////		int i = 1.0;
-//		Random random = new Random();
-//		int rand;
-//		for (int j = 0; j < 10; j++) {
-//			rand = (int)( Math.random() * 10 ) + 1;
-//			System.out.println("random number1: " + rand);
-//			rand = random.nextInt(10) + 1;
-//			System.out.println("random number2: " + rand);
-//		}	
+		System.out.println("=============================================");
+		Arrays.sort(shapes);
+		for (int j = 0; j < shapes.length; j++) {
+			shape = shapes[j];
+			if (shape != null) {
+				System.out.println(String.valueOf(shape) + " area = " + shape.getArea());
+				if(shape instanceof Circle) {
+					//Example of casting
+					System.out.println(((Circle) shape).getRadius());
+				}				
+				System.out.println(shape.whoAmI());
+			}
+		}		
+		System.out.println("=============================================");
+		double d = 1;
+//		int i = 1.0;
+		Random random = new Random();
+		int rand;
+		for (int j = 0; j < 10; j++) {
+			//Example of casting
+			rand = (int)( Math.random() * 10 ) + 1;
+			System.out.println("random number1: " + rand);
+			rand = random.nextInt(10) + 1;
+			System.out.println("random number2: " + rand);
+		}	
 		
 		
 
