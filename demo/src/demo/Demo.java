@@ -85,6 +85,15 @@ public class Demo {
 		System.out.println("=============================================");
 		for (int j = 0; j < shapes.length; j++) {
 			shape = shapes[j];
+			try {
+				if(j > 0) {
+					shapes[j].assumeMatch(shapes[j-1]);
+					System.out.println("shapes match");
+				}
+			} catch (ShapeMismatchException e) {
+				System.out.println("Exception caught");
+				e.printStackTrace();
+			}
 			if (shape != null) {
 				System.out.println(String.valueOf(shape) + " area = " + shape.getArea());
 				if(shape instanceof Circle) {
@@ -95,7 +104,10 @@ public class Demo {
 			}
 		}
 		System.out.println("=============================================");
+		System.out.println("sorting ... ");
 		Arrays.sort(shapes);
+		System.out.println("=============================================");
+
 		for (int j = 0; j < shapes.length; j++) {
 			shape = shapes[j];
 			if (shape != null) {
