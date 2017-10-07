@@ -118,9 +118,7 @@ public class Demo {
 			System.out.println("random number1: " + rand);
 			rand = random.nextInt(10) + 1;
 			System.out.println("random number2: " + rand);
-		}	
-		
-		
+		}			
 
 	}
 
