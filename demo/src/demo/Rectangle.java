@@ -16,6 +16,11 @@ public class Rectangle extends Shape {
 		this.width = width;
 	}
 
+	@Override
+	public double getArea() {
+		return length * width;
+	}
+	
 	public double getLength() {
 		return length;
 	}
@@ -32,10 +37,6 @@ public class Rectangle extends Shape {
 		this.width = width;
 	}
 
-	@Override
-	public double getArea() {
-		return length * width;
-	}
 	
 	public String toString(){
 		return "I am a rectangle with a length of " + length + " and width of " + width + " and an area of " + getArea();
