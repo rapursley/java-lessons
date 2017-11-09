@@ -1,5 +1,6 @@
 package demo;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -74,7 +75,7 @@ public class Demo {
 		System.out.println(shape);
 		shape = new Triangle();
 		System.out.println(shape);
-		Shape[] shapes = new Shape[7];
+		Shape[] shapes = new Shape[7];		
 		shapes[0] = c1;
 		shapes[1] = c2;
 		shapes[2] = new Rectangle();
@@ -82,6 +83,10 @@ public class Demo {
 		shapes[4] = new Triangle(2, 8);
 		shapes[5] = new Triangle(1, 3);
 		shapes[6] = new Triangle(5, 7);
+		System.out.println("=============================================");
+		System.out.println("shapeList: ");
+		ArrayList<Shape> shapeList =  new ArrayList<>(Arrays.asList(shapes));
+		System.out.println(shapeList);
 		System.out.println("=============================================");
 		for (int j = 0; j < shapes.length; j++) {
 			shape = shapes[j];
