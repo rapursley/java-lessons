@@ -8,7 +8,8 @@ public class USPS {
 		states.put("NC", "North Carolina");
 		states.put("MO", "Missouri");
 		System.out.println(states.get("NC"));
-
+		System.out.println(states.keySet());
+		System.out.println(states);
 	}
 
 }
