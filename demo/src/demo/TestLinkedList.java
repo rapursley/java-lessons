@@ -5,6 +5,7 @@ public class TestLinkedList {
 	public static void main(String[] args) {
 		System.out.println("Testing MyLinkedList with String objects.");
 		
+		/* Make an instance of MyLinkedList that stores Strings objects */
 		MyLinkedList<String> list1 = new MyLinkedList<>();
 		
 		list1.addAtTail("a");
@@ -17,8 +18,10 @@ public class TestLinkedList {
 	
 		System.out.println(list1);
 		
+		
 		System.out.println("Testing MyLinkedList with Integer objects.");
 		
+		/* Make an instance of MyLinkedList that stores Integer objects */
 		MyLinkedList<Integer> list2 = new MyLinkedList<>();
 		
 		list2.addAtTail(1);
@@ -31,10 +34,12 @@ public class TestLinkedList {
 	
 		System.out.println(list2);
 		
+		
 		System.out.println("Testing MyLinkedList with adding Integer objects in order.");
 		
+		/* Make an instance of MyLinkedList that stores Integer objects */
 		MyLinkedList<Integer> list3 = new MyLinkedList<>();
-		
+		//Java will perform autoboxing to put the primative  int inside of an Integer object.
 		list3.addInOrder(2);
 		list3.addInOrder(4);
 		list3.addInOrder(6);
