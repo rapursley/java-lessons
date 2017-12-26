@@ -1,5 +1,10 @@
 package demo;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -136,6 +141,20 @@ public class Demo {
 			rand = random.nextInt(10) + 1;
 			System.out.println("random number2: " + rand);
 		}			
+		System.out.println("=============================================");
+		System.out.println("Serializing the shapes array.");
+		File file = new File("Shapes.ser");
+		try {
+			FileOutputStream fos = new FileOutputStream(file);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(shapes);
+			System.out.println("Shapes arrya was serialized to " + file.getAbsolutePath());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 
 	}
 
@@ -143,3 +162,4 @@ public class Demo {
 		return "Hello World!! I am an instance of " + super.toString();
 	}
 }
+

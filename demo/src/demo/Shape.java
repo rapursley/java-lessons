@@ -1,6 +1,8 @@
 package demo;
 
-public abstract class Shape implements Comparable<Shape> {
+import java.io.Serializable;
+
+public abstract class Shape implements Comparable<Shape>, Serializable {
 	
 	public abstract double getArea();
 	
